@@ -1,3 +1,3 @@
 2019-asylum
 
-https://ebuddj.github.io/__PROJECTNAME__/
+https://ebuddj.github.io/2019-asylum/
