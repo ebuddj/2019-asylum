@@ -4,22 +4,17 @@ body {
   padding: 0;
 }
 h3 {
-  margin: auto auto;
-  text-align: center;
   font-family: 'Roboto';
   font-size: 24px;
   font-weight: 500;
+  margin: auto auto;
   max-width: 320px;
+  text-align: center;
 }
 .path___3EPLl {
   stroke-width: 0.5px;
   stroke: #fff;
   transition: fill 0.15s linear;
-}
-.path_notransition___L0Xja {
-  stroke-width: 0.5px;
-  stroke: #fff;
-  transition: none;
 }
 svg {
   display: block;
