@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import style from './../styles/styles.less';
-// We can just import Slider or Range to reduce bundle size
-import Slider from 'rc-slider/lib/Slider';
 
 // https://github.com/topojson/topojson
 import * as topojson from 'topojson';
 
-import slider_styles from 'rc-slider/assets/index.css';
+// https://www.npmjs.com/package/rc-slider
+import Slider from 'rc-slider/lib/Slider';
+import 'rc-slider/assets/index.css';
 
 // https://d3js.org/
 import _ from 'underscore';
