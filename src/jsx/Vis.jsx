@@ -1,15 +1,21 @@
 import React, {Component} from 'react'
 import style from './../styles/styles.less';
+// We can just import Slider or Range to reduce bundle size
+import Slider from 'rc-slider/lib/Slider';
 
 // https://github.com/topojson/topojson
 import * as topojson from 'topojson';
 
+import slider_styles from 'rc-slider/assets/index.css';
 
 // https://d3js.org/
 import _ from 'underscore';
 
 // https://d3js.org/
 import * as d3 from 'd3';
+
+let interval;
+let g, path;
 
 class Vis extends Component {
   constructor() {
@@ -20,41 +26,50 @@ class Vis extends Component {
     }
   }
   componentDidMount() {
-    let width = 900;
-    let height = 600;
+    let width = 320;
+    let height = 500;
 
-    let projection = d3.geoMercator().center([20,60]).scale(500);
+    let projection = d3.geoMercator().center([58,57]).scale(400);
     
     let svg = d3.select('.map').append('svg').attr('width', width).attr('height', height);
-    let path = d3.geoPath().projection(projection);
-    let g = svg.append('g');
+    path = d3.geoPath().projection(projection);
+    g = svg.append('g');
+
     let self = this;
     d3.json('./data/europe.topojson').then(function(topology) {
       g.selectAll('path').data(topojson.feature(topology, topology.objects.europe).features)
         .enter()
         .append('path')
         .attr('d', path)
+        .attr('class', style.path)
         .attr('fill', function(d, i) {
           return self.getCountryColor(d.properties.NAME);
         });
+      self.text = g.append('text')
+        .attr('alignment-baseline', 'middle')
+        .attr('dy', '.35em')
+        .attr('class', style.text)
+        .attr('text-anchor', 'middle')
+        .attr('x', '45%')
+        .attr('y', '55%')
+        .text(self.dates[self.state.year_month_idx].replace('M', '/'));
     });
     setTimeout(() => {
-      this.interval = setInterval(() => {
-        self.setState((state, props) => ({
-          year_month_idx:this.state.year_month_idx + 1,
-        }));
+      interval = setInterval(() => {
+        this.setState((state, props) => ({
+          year_month_idx:this.state.year_month_idx + 1
+        }), this.changeCountryColor);
         if (this.state.year_month_idx >= (this.dates.length - 1)) {
-          clearInterval(this.interval);
+          this.setState((state, props) => ({
+            year_month_idx:0
+          }));
         }
-        g.selectAll('path').attr('d', path)
-          .attr('fill', function(d, i) {
-            return self.getCountryColor(d.properties.NAME);
-          });
+        
       }, 300);
-    }, 500);
+    }, 2000);
   }
   componentWillUnMount() {
-    clearInterval(this.interval);
+    clearInterval(interval);
   }
   getCountryColor(country) {
     if (this.props.data[country] !== undefined) {
@@ -70,12 +85,45 @@ class Vis extends Component {
       return '#fff';
     }
   }
+  changeCountryColor(type) {
+    self = this;
+    g.selectAll('path').attr('d', path)
+      .attr('class', style.path_notransition)
+      .attr('fill', function(d, i) {
+        return self.getCountryColor(d.properties.NAME);
+      });
+  }
+  onBeforeSliderChange(value) {
+    if (interval) {
+      clearInterval(interval)
+    }
+  }
+  onSliderChange(value) {
+    this.setState((state, props) => ({
+      year_month_idx:value
+    }), this.changeCountryColor);
+  }
+  onAfterSliderChange(value) {
+  }
   render() {
     this.dates = _.keys(this.props.data['Finland']);
+    if (this.text) {
+      this.text.text(this.dates[this.state.year_month_idx].replace('M', '/'));
+    }
     return (
       <div>
-        <h3>{this.dates[this.state.year_month_idx]}</h3>
         <div className="map"></div>
+        <div>
+          <Slider
+            className={style.slider_container}
+            dots={false}
+            max={this.dates.length - 1}
+            onBeforeChange={this.onBeforeSliderChange}
+            onChange={this.onSliderChange.bind(this)}
+            onAfterChange={this.onAfterSliderChange.bind(this)}
+            value={this.state.year_month_idx}
+          />
+        </div>
       </div>
     );
   }

@@ -1,7 +1,25 @@
-@import 'basics.less';
-
-path {
+body {
+  margin:0;
+  padding:0;
+}
+.path {
   transition: fill 0.15s linear;
   stroke: #fff;
   stroke-width: 0.5px;
 }
+.path_notransition {
+  transition: none;
+  stroke: #fff;
+  stroke-width: 0.5px;
+}
+
+.text {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+}
+.slider_container {
+  max-width: 300px;
+  margin: 0 10px;
+}
+@import 'basics.less';

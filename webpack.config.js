@@ -30,7 +30,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: process.env.NODE_ENV === 'development',
-              reloadAll: true,
+              reloadAll: false,
             },
           },
           {
@@ -45,7 +45,11 @@ module.exports = {
             loader: "less-loader"
           }
         ]
-      }
+      },{
+        test: /\.css$/,
+        include: /node_modules\/rc-slider/,
+        use: ['style-loader', 'css-loader']
+      },
     ]
   },
   plugins: [
