@@ -55,18 +55,23 @@ class Vis extends Component {
         .text(self.dates[self.state.year_month_idx].replace('M', '/'));
     });
     setTimeout(() => {
-      interval = setInterval(() => {
-        this.setState((state, props) => ({
-          year_month_idx:this.state.year_month_idx + 1
-        }), this.changeCountryColor);
-        if (this.state.year_month_idx >= (this.dates.length - 1)) {
+      this.createInterval();
+    }, 3000);
+  }
+  createInterval() {
+    interval = setInterval(() => {
+      this.setState((state, props) => ({
+        year_month_idx:this.state.year_month_idx + 1
+      }), this.changeCountryColor);
+      if (this.state.year_month_idx >= (this.dates.length - 1)) {
+        clearInterval(interval);
+        setTimeout(() => {
           this.setState((state, props) => ({
             year_month_idx:0
-          }));
-        }
-        
-      }, 300);
-    }, 2000);
+          }), this.createInterval);
+        }, 2000);
+      }
+    }, 10);
   }
   componentWillUnMount() {
     clearInterval(interval);
@@ -112,18 +117,16 @@ class Vis extends Component {
     }
     return (
       <div>
+        <Slider
+          className={style.slider_container}
+          dots={false}
+          max={this.dates.length - 1}
+          onBeforeChange={this.onBeforeSliderChange}
+          onChange={this.onSliderChange.bind(this)}
+          onAfterChange={this.onAfterSliderChange.bind(this)}
+          value={this.state.year_month_idx}
+        />
         <div className="map"></div>
-        <div>
-          <Slider
-            className={style.slider_container}
-            dots={false}
-            max={this.dates.length - 1}
-            onBeforeChange={this.onBeforeSliderChange}
-            onChange={this.onSliderChange.bind(this)}
-            onAfterChange={this.onAfterSliderChange.bind(this)}
-            value={this.state.year_month_idx}
-          />
-        </div>
       </div>
     );
   }

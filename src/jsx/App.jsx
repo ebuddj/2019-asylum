@@ -31,7 +31,7 @@ class Layout extends Component {
   render() {
     return (
       <div>
-        <h3>Asylum and first time asylum applicants</h3>
+        <h3>Asylum and first time asylum applicants per country</h3>
         <Vis data={this.state.data} />
       </div>
     );
