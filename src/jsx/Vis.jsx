@@ -71,7 +71,7 @@ class Vis extends Component {
           }), this.createInterval);
         }, 2000);
       }
-    }, 10);
+    }, 200);
   }
   componentWillUnMount() {
     clearInterval(interval);
