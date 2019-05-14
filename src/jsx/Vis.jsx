@@ -86,7 +86,7 @@ class Vis extends Component {
     }
   }
   changeCountryColor(type) {
-    self = this;
+    let self = this;
     g.selectAll('path').attr('d', path)
       .attr('class', style.path_notransition)
       .attr('fill', function(d, i) {
