@@ -1,17 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500.css);
 body {
-  margin: 0;
+  margin: auto auto;
   padding: 0;
 }
 .path___3EPLl {
-  transition: fill 0.15s linear;
-  stroke: #fff;
   stroke-width: 0.5px;
+  stroke: #fff;
+  transition: fill 0.15s linear;
 }
 .path_notransition___L0Xja {
-  transition: none;
-  stroke: #fff;
   stroke-width: 0.5px;
+  stroke: #fff;
+  transition: none;
+}
+svg {
+  display: block;
+  margin: auto auto;
 }
 .text___3fVPW {
   font-family: 'Roboto';
@@ -19,8 +23,8 @@ body {
   font-weight: 500;
 }
 .slider_container___35Luy {
+  margin: auto auto;
   max-width: 300px;
-  margin: 0 10px;
 }
 /* General styles */
 .clearfix___1yHqr {
