@@ -86,7 +86,6 @@ class Vis extends Component {
         }));
       }
     }
-
     d3.json('./data/europe.topojson').then(function(topology) {
       g.selectAll('path').data(topojson.feature(topology, topology.objects.europe).features)
         .enter()
