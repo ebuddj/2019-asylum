@@ -12,10 +12,35 @@ h3 {
   max-width: 320px;
   text-align: center;
 }
+h4 {
+  font-family: 'Roboto';
+  font-weight: 500px;
+  margin: 0 0 5px 0;
+}
+p {
+  font-family: 'Roboto';
+  font-size: 13px;
+  line-height: 17px;
+  margin: 0 0 0 0;
+}
+.map {
+  margin: auto auto;
+  max-width: 320px;
+}
 .path {
   stroke-width: 0.5px;
   stroke: #fff;
   transition: fill 0.1s linear;
+}
+.selected {
+  stroke-width: 2px;
+  stroke: #f00;
+}
+.selected_country {
+  font-family: 'Roboto';
+  margin: auto auto;
+  max-width: 320px;
+  text-align: center;
 }
 svg {
   display: block;
@@ -23,11 +48,25 @@ svg {
 }
 .text {
   font-family: 'Roboto';
-  font-size: 24px;
+  font-size: 18px;
+  width: 100px;
+  height: 50px;
   font-weight: 500;
 }
 .slider_container {
   margin: auto auto auto auto;
   max-width: 300px;
 }
+.tooltip {
+  color: #222; 
+  background: #fff; 
+  border-radius: 3px; 
+  box-shadow: 0px 0px 2px 0px #a6a6a6; 
+  padding: .2em;
+  width: 100px;
+  text-shadow: #f5f5f5 0 1px 0;
+  opacity: 0.9; 
+  position: absolute;
+}
+
 @import 'basics.less';
