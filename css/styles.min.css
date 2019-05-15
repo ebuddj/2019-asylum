@@ -48,9 +48,10 @@ svg {
 .text___3fVPW {
   font-family: 'Roboto';
   font-size: 18px;
-  width: 100px;
-  height: 50px;
   font-weight: 500;
+  height: 50px;
+  text-shadow: 1px 1px 1px #ccc;
+  width: 100px;
 }
 .slider_container___35Luy {
   margin: auto auto auto auto;
