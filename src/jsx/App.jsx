@@ -4,6 +4,9 @@ import style from './../styles/styles.less';
 // https://alligator.io/react/axios-react/
 import axios from 'axios';
 
+// https://d3js.org/
+import _ from 'underscore';
+
 import Vis from './Vis.jsx';
 
 class Layout extends Component {
@@ -32,7 +35,7 @@ class Layout extends Component {
     return (
       <div>
         <h3>Asylum and first time asylum applicants per country</h3>
-        <Vis data={this.state.data} />
+        <Vis data={this.state.data}/>
       </div>
     );
   }
