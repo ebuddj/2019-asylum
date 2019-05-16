@@ -13,8 +13,9 @@ h3 {
 }
 h4 {
   font-family: 'Roboto';
-  font-weight: 500px;
-  margin: 0 0 5px 0;
+  font-weight: 500;
+  margin: 0 auto 5px auto;
+  max-width: 320px;
 }
 p {
   font-family: 'Roboto';
@@ -22,9 +23,17 @@ p {
   line-height: 17px;
   margin: 0 0 0 0;
 }
-.map___1UmDG {
+.slider_container___35Luy {
+  margin: auto auto auto auto;
+  max-width: 300px;
+}
+.map_container___22zRx {
   margin: auto auto;
   max-width: 320px;
+}
+svg {
+  display: block;
+  margin: auto auto;
 }
 .path___3EPLl {
   stroke-width: 0.5px;
@@ -41,10 +50,6 @@ p {
   max-width: 320px;
   text-align: center;
 }
-svg {
-  display: block;
-  margin: auto auto;
-}
 .text___3fVPW {
   font-family: 'Roboto';
   font-size: 18px;
@@ -53,20 +58,20 @@ svg {
   text-shadow: 1px 1px 1px #ccc;
   width: 100px;
 }
-.slider_container___35Luy {
-  margin: auto auto auto auto;
-  max-width: 300px;
-}
 .tooltip___MFNHN {
-  color: #222;
   background: #fff;
   border-radius: 3px;
   box-shadow: 0px 0px 2px 0px #a6a6a6;
-  padding: 0.2em;
-  width: 100px;
-  text-shadow: #f5f5f5 0 1px 0;
+  color: #222;
   opacity: 0.9;
+  padding: 0.2em;
   position: absolute;
+  text-shadow: #f5f5f5 0 1px 0;
+  width: 100px;
+}
+.line_chart_container___3LXZA {
+  margin: auto auto;
+  max-width: 320px;
 }
 /* General styles */
 .clearfix___1yHqr {
