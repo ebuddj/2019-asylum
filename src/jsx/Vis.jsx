@@ -231,7 +231,7 @@ class Vis extends Component {
             <Tooltip formatter={(value, name, props) => {
               return [value.toLocaleString() + ' asylum seekers'];
             }}/>/>
-            <Line type="linear" dataKey="value" stroke="#f00" dot={false} />
+            <Line type="linear" dataKey="value" stroke="#f00" strokeWidth={2} dot={false} />
           </LineChart>
         </ResponsiveContainer>
       </div>
