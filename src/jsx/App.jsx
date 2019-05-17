@@ -36,6 +36,7 @@ class Layout extends Component {
       <div>
         <h3>Asylum and first time asylum applicants per country</h3>
         <Vis data={this.state.data}/>
+        <p>Source: <a href="https://ec.europa.eu/eurostat/web/asylum-and-managed-migration/data/database">Eurostats</a></p>
       </div>
     );
   }
