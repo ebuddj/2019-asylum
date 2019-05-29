@@ -45,11 +45,12 @@ module.exports = {
             loader: "less-loader"
           }
         ]
-      },{
+      },
+      {
         test: /\.css$/,
         include: /node_modules\/rc-slider/,
         use: ['style-loader', 'css-loader']
-      },
+      }
     ]
   },
   plugins: [
