@@ -230,7 +230,7 @@ class Vis extends Component {
             <XAxis dataKey="date" interval={12} hide={true} />
             <Tooltip formatter={(value, name, props) => {
               return [value.toLocaleString() + ' asylum seekers'];
-            }}/>/>
+            }}/>
             <Line type="linear" dataKey="value" stroke="#f00" strokeWidth={2} dot={false} />
           </LineChart>
         </ResponsiveContainer>
