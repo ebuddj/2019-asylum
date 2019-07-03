@@ -8,5 +8,5 @@ Adopted by: Yle / Finland (published 28.5.2019)
 
 ## How to use
 
-`npm install`
-`npm start`
+* `npm install`
+* `npm start`
