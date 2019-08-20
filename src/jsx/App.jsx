@@ -33,7 +33,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className={style.plus}>
         <h3>Asylum and first time asylum applicants per country from 2012 to 2019</h3>
         <Vis data={this.state.data}/>
         <p>Source: <a href="https://ec.europa.eu/eurostat/web/asylum-and-managed-migration/data/database">Eurostats</a></p>

@@ -50,6 +50,11 @@ module.exports = {
         test: /\.css$/,
         include: /node_modules\/rc-slider/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.css$/,
+        include: /src\/styles\/rc-slider-override\.css/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },

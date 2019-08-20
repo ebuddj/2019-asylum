@@ -7,6 +7,7 @@ import * as topojson from 'topojson';
 // https://www.npmjs.com/package/rc-slider
 import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
+import './../styles/rc-slider-override.css';
 
 // http://recharts.org/en-US
 import {
@@ -224,7 +225,7 @@ class Vis extends Component {
           value={this.state.year_month_idx}
         />
         <div className={style.map_container}></div>
-        <h4>Asylum seekers from 2012/01 to 2019/02 in {this.state.selected_country}: {this.state.selected_country_total.toLocaleString()}. This is the monthly distribution</h4>
+        <h4>Asylum seekers from 2012/01 to 2019/04 in {this.state.selected_country}: {this.state.selected_country_total.toLocaleString()}. This is the monthly distribution</h4>
         <ResponsiveContainer width="100%" height={200} className={style.line_chart_container}>
           <LineChart isAnimationActive={true} data={this.state.line_chart_data} margin={{ top: 0, right: 5, left: 5, bottom: 0 }}>
             <XAxis dataKey="date" interval={12} hide={true} />

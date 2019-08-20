@@ -3,7 +3,10 @@ body {
   margin: auto auto;
   padding: 0;
 }
-h3 {
+.plus___DWTpR {
+  /* General styles */
+}
+.plus___DWTpR h3 {
   font-family: 'Roboto';
   font-size: 24px;
   font-weight: 500;
@@ -11,50 +14,50 @@ h3 {
   max-width: 320px;
   text-align: center;
 }
-h4 {
+.plus___DWTpR h4 {
   font-family: 'Roboto';
   font-weight: 500;
   margin: 0 auto 5px auto;
   max-width: 320px;
 }
-p {
+.plus___DWTpR p {
   font-family: 'Roboto';
   font-size: 13px;
   line-height: 17px;
   margin: 0 auto 0 auto;
   max-width: 320px;
 }
-a {
+.plus___DWTpR a {
   color: #000;
 }
-.slider_container___35Luy {
+.plus___DWTpR .slider_container___35Luy {
   margin: auto auto auto auto;
   max-width: 300px;
 }
-.map_container___22zRx {
+.plus___DWTpR .map_container___22zRx {
   margin: auto auto;
   max-width: 320px;
 }
-svg {
+.plus___DWTpR svg {
   display: block;
   margin: auto auto;
 }
-.path___3EPLl {
+.plus___DWTpR .path___3EPLl {
   stroke-width: 0.5px;
   stroke: #fff;
   transition: fill 0.1s linear;
 }
-.selected___3Z1JC {
+.plus___DWTpR .selected___3Z1JC {
   stroke-width: 2px;
   stroke: #f00;
 }
-.selected_country___m_uTp {
+.plus___DWTpR .selected_country___m_uTp {
   font-family: 'Roboto';
   margin: auto auto;
   max-width: 320px;
   text-align: center;
 }
-.text___3fVPW {
+.plus___DWTpR .text___3fVPW {
   font-family: 'Roboto';
   font-size: 18px;
   font-weight: 500;
@@ -62,7 +65,7 @@ svg {
   text-shadow: 1px 1px 1px #ccc;
   width: 100px;
 }
-.tooltip___MFNHN {
+.plus___DWTpR .tooltip___MFNHN {
   background: #fff;
   border-radius: 3px;
   box-shadow: 0px 0px 2px 0px #a6a6a6;
@@ -73,38 +76,37 @@ svg {
   text-shadow: #f5f5f5 0 1px 0;
   width: 100px;
 }
-.line_chart_container___3LXZA {
+.plus___DWTpR .line_chart_container___3LXZA {
   margin: auto auto;
   max-width: 320px;
 }
-/* General styles */
-.clearfix___1yHqr {
+.plus___DWTpR .clearfix___1yHqr {
   zoom: 1;
 }
-.clearfix___1yHqr:after {
+.plus___DWTpR .clearfix___1yHqr:after {
   clear: both;
   content: ' ';
   display: block;
   height: 0;
   visibility: hidden;
 }
-.ss-terms___dMEZ6 {
+.plus___DWTpR .ss-terms___dMEZ6 {
   margin: 40px auto auto auto;
   max-width: 450px;
 }
-.meta___3gcNx {
+.plus___DWTpR .meta___3gcNx {
   color: #333;
   font-size: 13px;
   line-height: 16px;
   padding: 0 10px 40px 10px;
 }
-.clear_both___a0DL_ {
+.plus___DWTpR .clear_both___a0DL_ {
   clear: both;
 }
-.hidden___1aMNf {
+.plus___DWTpR .hidden___1aMNf {
   display: none;
 }
-.nowrap___2n1o8 {
+.plus___DWTpR .nowrap___2n1o8 {
   white-space: nowrap;
 }
 
