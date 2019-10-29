@@ -2,7 +2,7 @@
 
 **Live demo** https://ebuddj.github.io/2019-asylum
 
-## Number of asylum seekers in European countries (EBU)
+## Number of Asylum Seekers in European Countries (EBU)
 
 The data visualization shows asylum and first time asylum applicants monthly per country from 2012 to April 2019.
 
