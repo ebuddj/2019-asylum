@@ -20,7 +20,7 @@ This visualization was made using Eurostat asylum statistics. Asylum statistics 
 
 **Used by**
 * [Yle/Finland](https://yle.fi/aihe/artikkeli/2019/05/28/nain-ihmiset-hakivat-turvapaikkoja-eri-puolilta-eurooppaa-2012-2019-tutki)
-* Yle/Finland on Broadcast
+* Yle/Finland on TV2
 
 ## How to use
 
