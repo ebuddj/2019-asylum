@@ -130,7 +130,7 @@ class Vis extends Component {
       this.createInterval();
     }, 3000);
   }
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     this.updateLineChartData(props.data);
   }
   componentWillUnMount() {
