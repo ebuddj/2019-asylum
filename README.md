@@ -12,15 +12,15 @@ Eurostat's statistics on asylum and managed migration provide statistical inform
 
 This visualization was made using Eurostat asylum statistics. Asylum statistics include: data on asylum applicants and first-time asylum applicants, unaccompanied minors applying for asylum, first instance decisions on applications and final decisions taken in appeal or review on asylum applications, as well as resettled persons.
 
-**Links**
-* [News Exchange](https://news-exchange.ebu.ch/item_detail/867cf13a7fb33bbe0676631a3fde0ac2/2019_21040500)
-
 **Sources**
 * [Eurostat](https://ec.europa.eu/eurostat/web/asylum-and-managed-migration/data/database)
+* Yle/Finland on TV2
+
+**EBU links**
+* [News Exchange](https://news-exchange.ebu.ch/item_detail/867cf13a7fb33bbe0676631a3fde0ac2/2019_21040500)
 
 **Used by**
 * [Yle/Finland on Online](https://yle.fi/aihe/artikkeli/2019/05/28/nain-ihmiset-hakivat-turvapaikkoja-eri-puolilta-eurooppaa-2012-2019-tutki)
-* Yle/Finland on TV2
 
 ## How to use
 
@@ -30,7 +30,7 @@ This visualization is part of the EBU News Exchange’s Data Journalism project.
 
 ## Rights of usage
 
-The material may be used only by Eurovision active members and sub-licensees.
+The material may be used only by [Eurovision active members and sub-licensees](https://www.ebu.ch/eurovision-news/members-and-sublicensees).
 
 ## How to build and develop
 
